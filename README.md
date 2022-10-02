@@ -9,3 +9,5 @@ npm i @google-cloud/text-to-speech @google-cloud/vision
 เติม Key ในไฟล์ Index.js ให้ครบในบรรทัดที่ 6-15
 
 การใช้งานแต่ละไฟล์ ให้พิมพ์คำสั่ง node <ชื่อไฟล์>
+
+สร้าง Folder ชื่อว่า mp3 ไว้เพื่อรองรับไฟล์เสียง
