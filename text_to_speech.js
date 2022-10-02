@@ -16,7 +16,7 @@ async function text_to_speech(){ //สร้าง funtions แบบ Promise
         voice: {languageCode: 'th-TH', ssmlGender: 'FEMALE'}, //ตั้งค่าน้ำเสียง ประเทศ , เพศ
         audioConfig: {audioEncoding: 'MP3'}, //ตั้งค่า Audio เป็น MP3
     };
-    const [response] = await client_texet_to_speech.synthesizeSpeech(request); //เก็บผลลัพท์ object ไว้ในค่าคงที่ response
+    const [response] = await client_texet_to_speech.synthesizeSpeech(request); //เรียกใช้ text to speech และ เก็บผลลัพท์ object ไว้ในค่าคงที่ response
     const writeFile = util.promisify(fs.writeFile); //เปลี่ยน callback เป็น Promise
     await writeFile(outputFile, response.audioContent, 'binary'); //สร้างไฟล์ที่เป็น mp3 ไว้ใน path ที่กำหนด
     console.log(`Audio content written to file: ${outputFile}`); //แสดงผลออกมาทาง Terminal
